@@ -1,0 +1,186 @@
+@import "_minix.scss";
+@import "common.scss";
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    width: 100%;
+    height: pxTorem(44px);
+    @include box_flex;
+    @include justify(space-between);
+    @include align;
+    padding: 0 pxTorem(15px);
+    @include sizing;
+    font-size: pxTorem(15px);
+    background: #000;
+    color: #fff;
+}
+
+footer {
+    width: 100%;
+    height: pxTorem(64px);
+    @include box_flex;
+    >dl {
+        width: 33%;
+        height: 100%;
+        @include box_flex;
+        @include direction(column);
+        // @include justify;
+        @include align;
+        dt {
+            img {
+                width: pxTorem(25px);
+            }
+        }
+        dd {
+            line-height: pxTorem(20px);
+            font-size: pxTorem(15px);
+        }
+    }
+}
+
+section {
+    width: 100%;
+    @include flex;
+    overflow-y: hidden;
+    background: #fff;
+    div {
+        width: 100%;
+        .top {
+            width: 100%;
+            height: pxTorem(44px);
+            background: #333333;
+            @include sizing;
+            padding: 10px;
+            @include box_flex;
+            color: #fff;
+            font-size: pxTorem(15px);
+            >img {
+                width: pxTorem(25px);
+            }
+        }
+        .secTop {
+            width: 100%;
+            height: pxTorem(90px);
+            padding: pxTorem(20px);
+            @include sizing;
+            @include box_flex;
+            background: #fff;
+            dl:nth-child(1) {
+                @include box_flex;
+                @include justify(row);
+                dt {
+                    width: 30%;
+                    margin-right: 0;
+                    padding-right: 0;
+                    img {
+                        width: 80%;
+                    }
+                }
+                dd {
+                    font-size: pxTorem(15px);
+                }
+            }
+            dl:nth-child(2) {
+                @include box_flex;
+                @include direction(column);
+                @include justify;
+                @include align;
+                dt {
+                    @include box_flex;
+                    @include justify;
+                    @include align;
+                    img {
+                        width: 50%;
+                    }
+                }
+                dd {
+                    font-size: pxTorem(15px);
+                }
+            }
+        }
+        .banner {
+            width: 100%;
+            height: auto;
+            img {
+                width: 100%;
+            }
+        }
+        .list {
+            width: 100%;
+            ul {
+                width: 100%;
+                height: pxTorem(40px);
+                @include box_flex;
+                @include justify(space-around);
+                @include align;
+                border-bottom: 1px solid #ccc;
+                li {
+                    padding: 10px;
+                    font-size: pxTorem(15px);
+                }
+                .active {
+                    color: #f2922f;
+                    border-bottom: 1px solid #f2922f;
+                }
+            }
+            .cont-cont {
+                width: 100%;
+                @include box_flex;
+                @include justify(space-around);
+                @include align;
+                @include flexWrap(wrap);
+                >dl {
+                    width: 48%;
+                    padding: 10px;
+                    @include sizing;
+                    border-bottom: 1px solid #ccc;
+                    >dt {
+                        width: 100%;
+                        height: pxTorem(100px);
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    >dd {
+                        font-size: pxTorem(12px);
+                        >P:nth-child(2) {
+                            line-height: 20px;
+                            margin-top: 10px;
+                        }
+                        >dl {
+                            @include box_flex;
+                            @include justify(space-between);
+                            @include align;
+                            margin-top: 20px;
+                            >dt {
+                                font-size: 20px;
+                                font-weight: 500;
+                            }
+                            >dd {
+                                width: 20px;
+                                height: 20px;
+                                background: #5adad0;
+                                color: #fff;
+                                line-height: 20px;
+                                text-align: center;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

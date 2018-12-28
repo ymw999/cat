@@ -1,0 +1,1 @@
+var BS=new BScroll("section",{probeType:2});
